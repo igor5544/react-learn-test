@@ -1,0 +1,2 @@
+(this["webpackJsonplesson-1-kama"]=this["webpackJsonplesson-1-kama"]||[]).push([[10],{309:function(e,t,n){"use strict";n.r(t);var a=n(0),s=n.n(a);t.default=function(){return s.a.createElement("section",null,s.a.createElement("h2",{className:"main-title"},"Settings"))}}}]);
+//# sourceMappingURL=10.85ecdfda.chunk.js.map
