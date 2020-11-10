@@ -1,0 +1,21 @@
+.main-btn {
+  transition: all 0.3s;
+  display: block;
+  max-width: 300px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  color: #ffffff;
+  background-color: darkblue;
+}
+
+.main-btn:hover {
+  opacity: 0.8;
+}
+
+.main-btn:active {
+  opacity: 0.6;
+}

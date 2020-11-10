@@ -1,0 +1,18 @@
+.textarea,
+.textarea__wrapper {
+  display: block;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.textarea {
+  max-width: 576px;
+  padding: 10px;
+  resize: none;
+}
+
+.textarea__wrapper {
+  max-width: 600px;
+  margin-bottom: 20px;
+}

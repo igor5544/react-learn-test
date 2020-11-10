@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 50px;
+  padding-left: 20px;
+  background-color: #7496f1;
+}
+
+.link {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.login {
+  margin: 0 5px 5px;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #ffffff;
+}

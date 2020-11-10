@@ -1,0 +1,40 @@
+.item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.item.me {
+  flex-direction: row-reverse;
+}
+
+.wrapper {
+  min-width: 100px;
+}
+
+.message {
+  display: block;
+  max-width: 400px;
+  width: 100%;
+  padding: 10px 20px;
+  border: 2px solid #f8760c;
+  border-radius: 50px;
+  margin-right: 10px;
+  margin-left: 10px;
+  background-color: #ffffff;
+}
+
+.img {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.name {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}

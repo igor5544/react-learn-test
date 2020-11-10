@@ -1,0 +1,7 @@
+.wrapper {
+  display: flex;
+}
+
+.users-list {
+  flex-grow: 1;
+}

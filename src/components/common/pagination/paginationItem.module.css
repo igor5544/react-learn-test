@@ -1,0 +1,51 @@
+.item {
+  flex-basis: 4.5%;
+  transition: all 0.3s;
+  width: 100%;
+  height: 33px;
+  margin: 0 0.5%;
+  border: 1px solid #001651;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.item:hover {
+  border-color: #990404;
+  background-color: #d2bb60;
+}
+
+.item:hover .link {
+  color: #ffffff;
+}
+
+.item:active {
+  opacity: 0.8;
+}
+
+.item--active {
+  border-color: #990404;
+  background-color: #990404;
+  cursor: default;
+}
+
+.item--active .link {
+  color: #ffffff;
+  cursor: default;
+}
+
+.item--active:hover {
+  border-color: #990404;
+  background-color: #990404;
+}
+
+.item--active:active {
+  opacity: 1;
+}
+
+.link {
+  display: block;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #670079;
+}

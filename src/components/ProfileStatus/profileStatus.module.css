@@ -1,0 +1,11 @@
+.text,
+.text-field  {
+  display: block;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.text {
+  color: #95ffff;
+  text-shadow: 0 0 5px #000000, 0 0 5px #000000, 0 0 5px #000000;
+}

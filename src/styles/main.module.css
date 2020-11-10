@@ -1,0 +1,17 @@
+.main {
+  display: grid;
+  grid-template-areas: "nav cont";
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 10px;
+}
+
+.content {
+  grid-area: cont;
+  min-height: 70vh;
+  padding: 0 0 20px;
+  background-color: #0cd101;
+}
+
+.navbar {
+  grid-area: nav;
+}

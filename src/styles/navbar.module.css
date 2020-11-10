@@ -1,0 +1,25 @@
+.navbar {
+  background-color: green;
+}
+
+.nav-list {
+  margin-bottom: 50px;
+}
+
+.link {
+  transition: all 0.3s;
+  color: white;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: red;
+}
+
+.link:active {
+  opacity: 0.9;
+}
+
+.link--active {
+  color: red;
+}
