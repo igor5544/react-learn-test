@@ -1,0 +1,49 @@
+.form {
+  padding-top: 20px;
+  margin: 20px;
+}
+
+.field {
+  margin-bottom: 10px;
+}
+
+.textarea-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.textarea-wrapper label {
+  margin-bottom: 10px;
+}
+
+.textarea-wrapper textarea {
+  resize: none;
+  height: 45px;
+  padding: 10px;
+}
+
+.contacts-wrapper {
+  display: flex;
+}
+
+.contacts-wrapper label {
+  display: block;
+  max-width: 100px;
+  width: 100%;
+}
+
+.field:last-of-type {
+  margin-bottom: 20px;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.error {
+  font-style: italic;
+  color: #ff0000;
+}

@@ -15,11 +15,17 @@ const LoginForm = (props) => {
       <Field type="password" wrapperclass={'main-form__field-wrpper'} name={'password'}
         placeholder="Passwrd" component={Input} validate={[required]}
       />
-      <div className={'main-form__section'}>
-        <Field type="checkbox" name={'rememberMe'} id="checkbox" label={'Remember me'}
-          component={Checkbox}
-        />
-      </div>
+      <Field type="checkbox" name={'rememberMe'} id="rememberMe" label={'Remember me'}
+        component={Checkbox} style={{ marginBottom: '20px' }}
+      />
+      {props.captchaUrl &&
+        <>
+          <img src={props.captchaUrl} alt="captcha img" width="200" height="50" className={s.captcha} />
+          <Field type="text" wrapperclass={'main-form__field-wrpper'} name={'captcha'}
+            component={Input} validate={[required]}
+          />
+        </>
+      }
       {
         props.error &&
         <p className={s.error}>
@@ -35,10 +41,10 @@ const LoginReduxForm = reduxForm({
   form: 'login'
 })(LoginForm)
 
-const Login = ({ login, isAuth }) => {
+const Login = ({ login, isAuth, captchaUrl }) => {
   const onSubmit = (formData) => {
-    const { email, password, rememberMe } = formData;
-    login(email, password, rememberMe);
+    const { email, password, rememberMe, captcha } = formData;
+    login(email, password, rememberMe, captcha);
   }
 
   if (isAuth) {
@@ -48,7 +54,7 @@ const Login = ({ login, isAuth }) => {
   return (
     <section>
       <h2 className="main-title">Login</h2>
-      <LoginReduxForm onSubmit={onSubmit} />
+      <LoginReduxForm onSubmit={onSubmit} captchaUrl={captchaUrl} />
     </section>
   )
 }

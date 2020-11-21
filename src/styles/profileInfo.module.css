@@ -1,5 +1,31 @@
-.user {
+.top-wrapper {
+  position: relative;
   display: flex;
+  padding-right: 120px;
+}
+
+.edit-btn {
+  transition: all 0.3s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 120px;
+  width: 100%;
+  padding: 5px 10px;
+  color: #ffffff;
+  background-color: #002191;
+  border: none;
+  border-bottom-left-radius: 30px;
+}
+
+.edit-btn:hover {
+  color: #002191;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px 2px #002191;
+}
+
+.edit-btn:active {
+  opacity: 0.6;
 }
 
 .avatar-img {
@@ -8,6 +34,18 @@
   object-fit: cover;
   object-position: center;
   margin-right: 20px;
+  margin-bottom: 5px;
+}
+
+.img-btn {
+  position: absolute;
+  top: 170px;
+  left: 10px;
+  width: 100%;
+}
+
+.img-btn label {
+  display: none;
 }
 
 .list {

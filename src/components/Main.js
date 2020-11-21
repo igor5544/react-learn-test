@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 import { withSuspense } from '../hoc/withSuspense';
 import s from '../styles/main.module.css';
 import Navbar from './Navbar';
@@ -17,13 +17,17 @@ const Main = () => {
     <main className={s.main}>
       <Navbar className={s.navbar} />
       <section className={s.content}>
-        <Route path="/profile/:userID?" render={withSuspense(ProfileContainer)} />
-        <Route path="/dialogs" render={withSuspense(DialogsContainer)} />
-        <Route path="/news" render={withSuspense(News)} />
-        <Route path="/music" render={withSuspense(Music)} />
-        <Route path="/users" render={withSuspense(UsersContainer)} />
-        <Route path="/settings" render={withSuspense(Settings)} />
-        <Route path="/login" render={withSuspense(LoginContainer)} />
+        <Switch>
+          <Route path="/" exact render={() => <Redirect to={"/profile"}/>} />
+          <Route path="/profile/:userID?" render={withSuspense(ProfileContainer)} />
+          <Route path="/dialogs" render={withSuspense(DialogsContainer)} />
+          <Route path="/news" render={withSuspense(News)} />
+          <Route path="/music" render={withSuspense(Music)} />
+          <Route path="/users" render={withSuspense(UsersContainer)} />
+          <Route path="/settings" render={withSuspense(Settings)} />
+          <Route path="/login" render={withSuspense(LoginContainer)} />
+          <Route path="*" render={() => <div>404 NOT FOUND</div>} />
+        </Switch>
       </section>
     </main>
   )

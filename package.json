@@ -2,7 +2,7 @@
   "name": "lesson-1-kama",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/igor5544/react-learn-test",
+  "homepage": "https://github.com/react-learn-test",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",

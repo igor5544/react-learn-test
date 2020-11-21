@@ -15,15 +15,21 @@ export const FormControl = ({ children, meta, ...props }) => {
 }
 
 export const Textarea = (props) => {
-  const { input, meta, ...restProps } = props;
+  const { input, meta, label, ...restProps } = props;
 
-  return <FormControl {...props}><textarea {...input} {...restProps} ></textarea></FormControl>
+  return <FormControl {...props}>
+    {label && <label htmlFor={restProps.id}>{label}</label>}
+    <textarea {...input} {...restProps} ></textarea>
+  </FormControl>
 }
 
 export const Input = (props) => {
-  const { input, meta, ...restProps } = props;
+  const { input, meta, label, ...restProps } = props;
 
-  return <FormControl {...props}><input {...input} {...restProps} ></input></FormControl>
+  return <FormControl {...props}>
+    {label && <label htmlFor={restProps.id}>{label}</label>}
+    <input {...input} {...restProps} ></input>
+  </FormControl>
 }
 
 export const Checkbox = (props) => {

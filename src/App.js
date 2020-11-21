@@ -11,8 +11,18 @@ import HeaderContainer from './components/HeaderContainer';
 import Preloader from './components/Preloader';
 
 class App extends React.Component {
+  catchAllUnhandledErrors = (reason, promise) => {
+    alert(reason)
+  }
+
   componentDidMount() {
     this.props.initializeApp();
+
+    window.addEventListener("unhandledrejection", this.catchAllUnhandledErrors);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("unhandledrejection", this.catchAllUnhandledErrors);
   }
 
   render() {
